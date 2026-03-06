@@ -14,10 +14,22 @@ public class CustomList {
         cities.add(city);
     }
 
-    
-
     // Will be implemented later using TDD (leave blank for now)
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
+
+    /**
+     * This deletes a city from the list if it exists
+     * @param city
+     * @throws IllegalArgumentException if the city does not exist in the list
+     */
+    public void deleteCity(City city) {
+        if (cities.contains(city)) {
+            cities.remove(city);
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
+
 }
